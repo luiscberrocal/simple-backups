@@ -15,7 +15,10 @@ def backup_file(filename: Path, backup_folder: Path, datetime_format: str = '%Y%
         logger.error(error_message)
         raise SimpleBackupsError(error_message)
 
-    backup_filename = build_filename(backup_folder, filename, current_version, datetime_format)
+    backup_filename = build_filename(file_path=filename,
+                                     backup_folder=backup_folder,
+                                     current_version=current_version,
+                                     datetime_format=datetime_format)
     if backup_filename == filename:
         error_message = f'Cannot overwrite backup file: {backup_filename}.'
         logger.error(error_message)
@@ -29,7 +32,8 @@ def backup_file(filename: Path, backup_folder: Path, datetime_format: str = '%Y%
         raise SimpleBackupsError(error_message)
 
 
-def build_filename(filename: Path, backup_folder: Path, current_version: str, datetime_format: str):
+def build_filename(*, file_path: Path, backup_folder: Path, current_version: str | None,
+                   datetime_format: str | None) -> Path:
     if current_version is None:
         version_val = ''
     else:
@@ -39,5 +43,5 @@ def build_filename(filename: Path, backup_folder: Path, current_version: str, da
     else:
         timestamp = datetime.now().strftime(datetime_format)
         timestamp_val = f'{timestamp}_'
-    backup_filename = backup_folder / f'{timestamp_val}{version_val}{filename.name}'
+    backup_filename = backup_folder / f'{timestamp_val}{version_val}{file_path.name}'
     return backup_filename
