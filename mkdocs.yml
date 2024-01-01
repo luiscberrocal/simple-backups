@@ -53,5 +53,21 @@ extra:
       name: Github
     - icon: material/email
       link: "mailto:luis.berrocal.1942@gmail.com"
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 copyright: |
   &copy; 2023 <a href="https://github.com/luiscberrocal/simple-backups" targe="_blank" rel="noopener">Luis C. Berrocal</a>
