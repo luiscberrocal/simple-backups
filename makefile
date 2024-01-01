@@ -20,7 +20,15 @@ pre-commit:
 	pre-commit run --all-files
 
 clean:
-	rm -rf .pytest_cache
+	rm -rf .mypy_cache .pytest_cache
 	rm -rf *.egg-info
 	rm -rf .tox dist site
 	rm -rf coverage.xml .coverage
+	rm -rf ./output/*
+	rm -rf ./dist
+
+dist: clean
+	poetry build
+
+release: dist ## package and upload a release
+	twine upload dist/*
