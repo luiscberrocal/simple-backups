@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "simple-backups"
-version = "0.3.1"
+version = "0.3.2"
 homepage = "https://github.com/luiscberrocal/simple-backups"
 description = "Simple backups library."
 authors = ["Luis C. Berrocal <luis.berrocal.1942@gmail.com>"]
@@ -15,6 +15,7 @@ classifiers=[
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
 ]
 packages = [
     { include = "simple_backups" },
@@ -22,7 +23,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.12"
+python = ">=3.10,<3.13"
 pydantic = "^2.5.3"
 
 [tool.poetry.group.dev.dependencies]
