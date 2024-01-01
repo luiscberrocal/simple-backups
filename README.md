@@ -19,7 +19,7 @@ Simple backups library
 
 ## Features
 
-* TODO
+* Create a copy of a file into a backup folder with a dated filename.
 
 ## Credits
 

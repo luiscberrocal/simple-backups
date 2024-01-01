@@ -8,6 +8,12 @@ from .exceptions import SimpleBackupsError
 logger = logging.getLogger(__name__)
 
 
+# TODO Add support for Python 3.9 and 3.12 in tox
+# TODO Add zipping capabilities
+# TODO Add zipping folder capabilities
+# TODO Add async capabilities.
+# TODO Add documentations
+
 def backup_file(filename: Path, backup_folder: Path, datetime_format: str = '%Y%m%d_%H%M%S',
                 current_version: str = None, ) -> Path:
     if not backup_folder.is_dir():
