@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "simple-backups"
-version = "0.3.1"
+version = "0.3.2"
 homepage = "https://github.com/luiscberrocal/simple-backups"
 description = "Simple backups library."
 authors = ["Luis C. Berrocal <luis.berrocal.1942@gmail.com>"]
