@@ -17,10 +17,20 @@ theme:
     scheme: preference
     primary: indigo
     accent: indigo
+  # features:
+  #   - navigation.indexes
+  #   - navigation.instant
+  #   - navigation.tabs.sticky
   features:
-    - navigation.indexes
-    - navigation.instant
-    - navigation.tabs.sticky
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
 plugins:
   - include-markdown
   - search:
@@ -31,11 +41,11 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/twitter
-      # replace with your own tweet link below
+      # FIXME replace with your own tweet link below
       link: https://github.com/luiscberrocal/cookiecutter-pypackage
       name: Tweet
     - icon: fontawesome/brands/facebook
-      # replace with your own facebook link below
+      # FIXME replace with your own facebook link below
       link: https://github.com/luiscberrocal/cookiecutter-pypackage
       name: Facebook
     - icon: fontawesome/brands/github
@@ -43,9 +53,5 @@ extra:
       name: Github
     - icon: material/email
       link: "mailto:luis.berrocal.1942@gmail.com"
-  # to enable disqus, uncomment the following and put your disqus id below
-  # disqus: disqus_id
-# uncomment the following and put your google tracking id below to enable GA
-#google_analytics:
-  #- UA-xxx
-  #- auto
+copyright: |
+  &copy; 2023 <a href="https://github.com/luiscberrocal/simple-backups" targe="_blank" rel="noopener">Luis C. Berrocal</a>
