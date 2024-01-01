@@ -8,7 +8,7 @@ from .exceptions import SimpleBackupsError
 logger = logging.getLogger(__name__)
 
 
-# TODO Add support for Python 3.9 and 3.12 in tox
+# TODO Add support for Python 3.9??
 # TODO Add zipping capabilities
 # TODO Add zipping folder capabilities
 # TODO Add async capabilities.
@@ -21,6 +21,14 @@ def backup_file(
     datetime_format: str = '%Y%m%d_%H%M%S',
     current_version: str = None,
 ) -> Path:
+    """
+    Copies the filename to the backup folder append the datetime and version if supplied
+    @param filename: The name of the file to backup.
+    @param backup_folder: The folder where the backup will be stored.
+    @param datetime_format: The datetime format to include in the backup file.
+    @param current_version: The version of the application.
+    @return: The path to the backup file.
+    """
     if not backup_folder.is_dir():
         error_message = f'Backup folder has to be a folder.' f' Supplied: {backup_folder}. Type: {type(backup_folder)}'
         logger.error(error_message)
