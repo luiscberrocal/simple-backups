@@ -20,8 +20,9 @@ jobs:
     # The type of runner that the job will run on
     strategy:
       matrix:
-        python-versions: [3.10.12, 3.11, 3.12]
-        os: [ubuntu-22.04,  windows-latest] # macos-latest,
+        # Available versions in https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
+        python-versions: [3.10.11, 3.11, 3.12]
+        os: [ubuntu-22.04,  windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
