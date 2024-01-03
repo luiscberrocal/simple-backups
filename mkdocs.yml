@@ -33,7 +33,11 @@ theme:
     - content.code.annotation
     - content.code.copy
 plugins:
-  - include-markdown
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
   - search:
       lang: en
   - mkdocstrings
